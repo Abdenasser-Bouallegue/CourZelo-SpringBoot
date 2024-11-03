@@ -23,17 +23,7 @@ public class Quiz implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Setter
     private String title;
     private String description;
     private Integer duration;
-    @OneToMany(mappedBy = "quiz",cascade = CascadeType.ALL , orphanRemoval = true,fetch = FetchType.EAGER)
-@JsonProperty ("questions")
-    private List<Question> questions = new ArrayList<>();
-
-
-
-
-
-
 }

@@ -10,7 +10,17 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Departement/pom.xml" />
+        <option value="$PROJECT_DIR$/Forum/pom.xml" />
+        <option value="$PROJECT_DIR$/Service-absence/pom.xml" />
+        <option value="$PROJECT_DIR$/auth-service/pom.xml" />
+        <option value="$PROJECT_DIR$/chat-service/pom.xml" />
+        <option value="$PROJECT_DIR$/courses-module/pom.xml" />
+        <option value="$PROJECT_DIR$/feedback/pom.xml" />
+        <option value="$PROJECT_DIR$/media-sources-module/pom.xml" />
+        <option value="$PROJECT_DIR$/scheduler-module/pom.xml" />
         <option value="$PROJECT_DIR$/sheduler-module/pom.xml" />
+        <option value="$PROJECT_DIR$/stream/pom.xml" />
       </set>
     </option>
   </component>

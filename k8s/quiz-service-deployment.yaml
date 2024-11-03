@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quiz-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quiz-deployment
+  template:
+    metadata:
+      labels:
+        app: quiz-deployment
+    spec:
+      containers:
+        - name: quiz-service
+          image: rayenkh98/quiz-service:latest
+          ports:
+            - containerPort: 9000
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://postgresdb:5432/quizDB
+            - name: SPRING_DATASOURCE_USERNAME
+              value: username
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: pass
+            - name: eureka.client.service-url.defaultZone
+              value: http://eureka:8761/eureka/
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quiz-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 0  # Update to your application's port
+      targetPort: 9000  # Port in the container
+  selector:
+    app: quiz-deployment

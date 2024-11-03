@@ -4,31 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.kamelbenarous</groupId>
+    <groupId>io</groupId>
     <artifactId>e-learning</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>discovery-server</module>
         <module>api-gateway</module>
-        <module>courses-module</module>
-        <module>media-sources-module</module>
-        <module>auth-service</module>
-        <module>Service-absence</module>
-        <module>chat-service</module>
-        <module>scheduler-module</module>
-        <module>feedback</module>
-        <module>stream</module>
-        <module>Forum</module>
-        <module>Departement</module>
         <module>quiz</module>
 
     </modules>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>3.1.2</spring-boot.version>
         <spring-cloud.version>2022.0.3</spring-cloud.version>
@@ -79,10 +69,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>19</source>
-                    <target>19</target>
-                </configuration>
+
             </plugin>
         </plugins>
     </build>
